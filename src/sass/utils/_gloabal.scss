@@ -1,0 +1,52 @@
+.container {
+   width: 100%;
+   margin: auto;
+   position: relative;
+   @include media-query(xs) {
+      width: 100%;
+      padding: {
+         left: 10px;
+         right: 10px;
+      }
+   }
+   @include media-query(sm) {
+      width: 95%;
+   }
+   @include media-query(md) {
+      width: 85%;
+   }
+   @include media-query(lg) {
+      width: 1170px;
+   }
+
+   @include media-query(xl) {
+      width: 1344px;
+   }
+   @include media-query(gt-lg) {
+      width: 1344px;
+   }
+}
+.flex__center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+section {
+   margin: {
+      top: 50px;
+      bottom: 50px;
+   }
+   @include media-query(gt-md) {
+      margin: {
+         top: 120px;
+         bottom: 120px;
+      }
+   }
+   @include media-query(gt-lg) {
+      margin: {
+         top: 150px;
+         bottom: 150px;
+      }
+   }
+}

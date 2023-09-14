@@ -1,0 +1,21 @@
+// reset
+@import "base/reset";
+// utils
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/gloabal";
+
+// base
+@import "base/typography";
+// components
+@import "components/buttons";
+@import "components/card.scss";
+
+// layout
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/navigation";
+@import "layout/header";
+
+// pages
+@import "pages/home";

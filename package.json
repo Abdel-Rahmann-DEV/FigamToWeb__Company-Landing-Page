@@ -1,0 +1,15 @@
+{
+  "name": "company-landing-page",
+  "version": "0.0.1",
+  "description": "Construction Company Landing page (Community) use sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "repo"
+  },
+  "author": "Abdo-MH",
+  "license": "ISC"
+}

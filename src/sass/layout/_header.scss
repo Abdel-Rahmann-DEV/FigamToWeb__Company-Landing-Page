@@ -1,0 +1,83 @@
+.landing {
+   position: relative;
+   width: 100%;
+
+   padding: {
+      top: 86px;
+      bottom: 86px;
+   }
+
+   > .bg {
+      position: absolute;
+      inset: 0;
+      background-color: #e4e3e8;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      user-select: none;
+      display: flex;
+      justify-content: flex-end;
+
+      > img {
+         height: 100%;
+         width: auto;
+         pointer-events: none;
+         z-index: 0;
+      }
+   }
+
+   > .container {
+      position: relative;
+      z-index: 10;
+
+      > {
+         .landing__title {
+            margin-top: 33px;
+         }
+
+         .landing__p {
+            margin-top: 31px;
+            color: $light-blue;
+            max-width: 427px;
+
+            > span.bold {
+               color: $dark-blue;
+               font-weight: 600;
+            }
+
+            @include media-query(lt-sm) {
+               text-align: center;
+            }
+         }
+
+         .landing__inputs {
+            margin-top: 105px;
+            width: 100%;
+            gap: 30px;
+            flex-direction: column;
+
+            @include media-query(gt-xs) {
+               flex-direction: row;
+               justify-content: flex-start;
+            }
+
+            > .landing--button {
+               font-weight: 500;
+               font-size: 20px;
+               letter-spacing: 0;
+
+               &.landing__input--primary {
+                  background-color: transparent;
+                  gap: 8px;
+
+                  > .input--tap {
+                     width: 80px;
+                     height: 2px;
+                     background-color: $dark-blue;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

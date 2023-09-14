@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dynamic Slide-out Menu</title>
+      <!-- <link rel="stylesheet" href="./dist/css/main.css" /> -->
+      <style>
+         body {
+            /* Remove overflow: hidden to allow scrolling */
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+         }
+
+         .menu {
+            position: fixed;
+            top: 0;
+            right: -100%; /* Initial position outside the screen */
+            height: 100%;
+            width: 400px; /* Adjust this width as needed */
+            background-color: #333; /* Style the menu background */
+            transition: right 0.3s ease; /* Add a transition for smooth sliding */
+            z-index: 1000; /* Make sure the menu is on top of other content */
+         }
+
+         @media screen and (max-width: 500px) {
+            .menu {
+               width: 80%;
+               right: -80%; /* Hide the menu completely when closed */
+            }
+         }
+
+         .menu.menu-open {
+            right: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <button class="open-button">Open Menu</button>
+      <div id="menu" class="menu">
+         <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quam? Molestiae laborum fugit adipisci quis libero quisquam dolore quas itaque officia, velit voluptates quaerat aut voluptate, quibusdam consequuntur modi minima.</li>
+            <li>Illo provident necessitatibus sequi rem cupiditate culpa dolores vitae dolore possimus similique eum libero architecto labore illum aliquam qui accusantium magni eaque, quo modi. Libero vero reprehenderit necessitatibus omnis cum?</li>
+            <li>Veritatis maiores atque distinctio. Debitis facilis earum repellat dolore possimus sequi ipsa ipsum molestiae id quae eius, atque modi similique autem. Sit, doloribus laborum vitae alias placeat possimus voluptatem. Nihil!</li>
+            <li>Aut qui ipsum autem ab quos excepturi vitae esse omnis consectetur laborum id quis earum totam harum saepe inventore, explicabo eum numquam natus, unde laboriosam recusandae cupiditate. Officiis, nobis nihil?</li>
+         </ul>
+      </div>
+      <script>
+         const menu = document.querySelector(".menu");
+         const openButton = document.querySelector(".open-button"); // Change to your trigger element
+
+         openButton.addEventListener("click", () => {
+            menu.classList.toggle("menu-open");
+         });
+      </script>
+   </body>
+</html>

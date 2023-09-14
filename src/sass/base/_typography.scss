@@ -1,0 +1,103 @@
+* {
+   font-family: $main-font;
+}
+
+* {
+   font-family: $main-font;
+}
+
+// Typography
+.heading {
+   &-xl {
+      font-size: 60px;
+      color: $dark-blue;
+      font-weight: 500;
+      line-height: 90px;
+      @include media-query(lt-md) {
+         font-size: 42.8px;
+         line-height: 63px;
+      }
+      @include media-query(lt-sm) {
+         font-size: 30px;
+         line-height: 50px;
+         text-align: center;
+      }
+   }
+   &-lg-dark {
+      font-size: 48px;
+      line-height: 64px;
+      font-weight: 600;
+      color: $dark-blue;
+   }
+   &-sm-dark {
+      font-size: 26px;
+      font-weight: 700;
+      color: $dark-blue;
+   }
+}
+
+.paragraph {
+   &-regular-light {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+   }
+   &-quote-dark {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      color: $dark-blue;
+   }
+   &-meduim-light {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $white;
+   }
+}
+
+.nav-logo {
+   &-font {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 106%;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 0px;
+   }
+}
+
+// Cards
+.main-card {
+   &-title {
+      font-size: 24px;
+
+      font-weight: 600;
+   }
+   &-p {
+      color: $gray;
+   }
+   &-link {
+      color: $orange;
+   }
+}
+
+.clients {
+   &-logo-title {
+      font-size: 18px;
+
+      letter-spacing: 70%;
+      color: $dark-blue;
+      font-weight: 700;
+   }
+}
+
+.achievements {
+   &-card-title-text {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 0%;
+
+      color: $dark-blue;
+   }
+}
