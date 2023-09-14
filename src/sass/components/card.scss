@@ -48,3 +48,38 @@
       }
    }
 }
+.achievements-card {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 14px;
+   > .achievements-card--icon {
+      > img {
+         width: 48px;
+         @include media-query(gt-xs) {
+            max-width: 67px;
+            width: auto;
+         }
+      }
+   }
+   > .achievements-card--title {
+      > .count {
+         color: $dark-blue;
+         font-weight: 600;
+         font-size: 20px;
+         line-height: 30px;
+         margin-bottom: -3px;
+         @include media-query(gt-xs) {
+            font-size: 32px;
+            line-height: 48px;
+            margin-bottom: -5px;
+         }
+      }
+      > .name {
+         color: $dark-blue;
+      }
+      > span {
+         display: block;
+      }
+   }
+}

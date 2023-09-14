@@ -38,9 +38,13 @@
 
 .paragraph {
    &-regular-light {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: normal;
       font-weight: 400;
-      line-height: 28px;
+      @include media-query(gt-xs) {
+         font-size: 16px;
+         line-height: 28px;
+      }
    }
    &-quote-dark {
       font-size: 18px;
@@ -94,10 +98,12 @@
 
 .achievements {
    &-card-title-text {
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 600;
       letter-spacing: 0%;
-
       color: $dark-blue;
+      @include media-query(gt-xs) {
+         font-size: 32px;
+      }
    }
 }
