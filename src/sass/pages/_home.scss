@@ -46,9 +46,42 @@ section.achievements {
             @include media-query(gt-sm) {
                row-gap: 37px;
             }
+            @media screen and (max-width: 298px) {
+               justify-content: center;
+            }
             > .achievements__score--card {
                flex-basis: 50%;
             }
+         }
+      }
+   }
+}
+
+section.our-clintes {
+   .container {
+      > .our-clintes__title {
+         text-align: center;
+         font-size: 26px;
+         font-weight: 700;
+         line-height: 31px;
+         color: $dark-blue;
+         margin-bottom: 47px;
+      }
+      > .our-clintes__client-cont {
+         display: grid;
+         grid-template-columns: repeat(2, auto);
+         row-gap: 15px;
+         @include media-query(gt-md) {
+            grid-template-columns: repeat(4, auto);
+            justify-content: space-between;
+         }
+         @media screen and (max-width: 311px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+         }
+         > .our-clintes__card {
+            justify-self: center;
          }
       }
    }
