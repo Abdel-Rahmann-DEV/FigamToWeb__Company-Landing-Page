@@ -2,9 +2,12 @@
 .button {
    &-get-started {
       background-color: $light-blue;
-      padding: 8px 29px;
+      padding: 6px 15px;
       border-radius: $main-button-rad;
       color: $white;
+      @include media-query(gt-xs) {
+         padding: 8px 29px;
+      }
    }
    &-main {
       background-color: $dark-blue;
@@ -13,25 +16,5 @@
       border-radius: $main-button-rad;
       cursor: pointer;
       text-transform: capitalize;
-   }
-}
-
-// Email Form
-.email-form {
-   &__submit-button {
-      background-color: $dark-blue;
-      padding: 8px 15px; // alpha
-      border: {
-         top-right-radius: $main-button-rad;
-         bottom-right-radius: $main-button-rad;
-      }
-   }
-
-   &__email-input {
-      background-color: $light-white;
-      border: {
-         top-left-radius: $main-button-rad;
-         bottom-left-radius: $main-button-rad;
-      }
    }
 }

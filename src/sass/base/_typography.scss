@@ -2,10 +2,6 @@
    font-family: $main-font;
 }
 
-* {
-   font-family: $main-font;
-}
-
 // Typography
 .heading {
    &-xl {
@@ -13,26 +9,50 @@
       color: $dark-blue;
       font-weight: 500;
       line-height: 90px;
+
       @include media-query(lt-md) {
          font-size: 42.8px;
          line-height: 63px;
       }
+
       @include media-query(lt-sm) {
          font-size: 30px;
          line-height: 50px;
          text-align: center;
       }
    }
+
    &-lg-dark {
       font-size: 48px;
       line-height: 64px;
       font-weight: 600;
       color: $dark-blue;
+
+      @include media-query(lt-md) {
+         font-size: 36px;
+         line-height: 48px;
+      }
+
+      @include media-query(lt-sm) {
+         font-size: 24px;
+         line-height: 32px;
+         text-align: center;
+      }
    }
+
    &-sm-dark {
       font-size: 26px;
       font-weight: 700;
       color: $dark-blue;
+
+      @include media-query(lt-md) {
+         font-size: 20px;
+      }
+
+      @include media-query(lt-sm) {
+         font-size: 18px;
+         text-align: center;
+      }
    }
 }
 
@@ -47,16 +67,23 @@
       }
    }
    &-quote-dark {
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 22px;
       color: $dark-blue;
+      @include media-query(gt-xs) {
+         font-size: 18px;
+         line-height: 32px;
+      }
    }
    &-meduim-light {
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
       line-height: 20px;
+      font-weight: 500;
       color: $white;
+      @include media-query(gt-xs) {
+         font-size: 16px;
+      }
    }
 }
 

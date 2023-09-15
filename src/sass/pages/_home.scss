@@ -142,3 +142,202 @@ section.branches {
       margin-left: 0;
    }
 }
+section.build {
+   > .container {
+      > {
+         .build__title,
+         .build__p {
+            text-align: center;
+         }
+         .build__p {
+            color: $dark-blue;
+            margin: {
+               top: 22px;
+               bottom: 51px;
+            }
+         }
+         .build__img-cont {
+            overflow: hidden;
+            width: 100%;
+            @include media-query(gt-xs) {
+               border-radius: $main-img-section-rad;
+            }
+            > img {
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+section.quote {
+   background-color: $light-cyan-blue;
+   position: relative;
+   > .container {
+      margin-top: 51px;
+      margin-bottom: 66px;
+      > {
+         .quote__title {
+            text-align: center;
+
+            margin-bottom: 45px;
+         }
+         .quote__quote-cont {
+            max-width: 854px;
+            padding: 30px 29px 30px 70px;
+            margin: {
+               left: auto;
+               right: auto;
+               bottom: 62px;
+            }
+            background-color: $light-grayish;
+            position: relative;
+            border-radius: $main-quote-rad;
+            @include media-query(gt-xs) {
+               padding: 40px 32px 40px 92px;
+            }
+            &::before {
+               // for quote icon
+               content: "\201C";
+               font-size: 55px;
+               color: $dark-blue;
+               position: absolute;
+               top: 23px;
+               left: 27px;
+               font-family: $base-font;
+               @include media-query(gt-xs) {
+                  font-weight: 800;
+                  font-size: 72px;
+                  top: 16px;
+                  line-height: 98px;
+                  left: 40px;
+               }
+            }
+            &::after {
+               content: "";
+               position: absolute;
+               background-color: inherit;
+               width: 24px;
+               height: 14.8px;
+               bottom: -14.8px;
+               left: 48px;
+               clip-path: polygon(50% 100%, 0 0, 100% 0);
+            }
+         }
+         .quote__active-clintes {
+            gap: 28px;
+            flex-direction: column;
+            @include media-query(gt-sm) {
+               flex-direction: row;
+            }
+            > .quote__active-clintes--main-clinte {
+               gap: 16px;
+               > .clinte-info {
+                  > span {
+                     display: block;
+                     margin: 0;
+                  }
+                  > .description {
+                     font-weight: 600;
+                     line-height: 27px;
+                  }
+               }
+            }
+            > .quote__active-clintes--other-clintes {
+               gap: 50px;
+               @include media-query(gt-xs) {
+                  gap: 60px;
+               }
+               @include media-query(gt-sm) {
+                  gap: 80px;
+               }
+               flex-wrap: wrap;
+               > img {
+                  width: auto;
+               }
+            }
+         }
+      }
+   }
+}
+
+section.form {
+   background-color: $white;
+   > .container {
+      position: relative;
+      overflow: hidden;
+      @include media-query(gt-xs) {
+         border-radius: $main-box-rad;
+      }
+      background: linear-gradient(to bottom, #b3becd, #c1ccdb);
+      background-color: red;
+      min-height: 288px;
+      > .form__bg {
+         position: absolute;
+         width: auto;
+         z-index: 0;
+         height: auto;
+         left: 0;
+         top: 0;
+         > img {
+            width: 100%;
+            display: block;
+         }
+         display: none;
+         @include media-query(gt-md) {
+            display: block;
+         }
+      }
+      > form {
+         position: relative;
+         z-index: 100;
+         max-width: fit-content;
+         margin: auto;
+         @include media-query(gt-md) {
+            margin-left: auto;
+            margin-right: 128px;
+         }
+         > .form__title {
+            margin: {
+               top: 75px;
+               bottom: 22px;
+            }
+         }
+         > .form__input {
+            display: block;
+            border-radius: $main-button-rad;
+            margin: auto;
+            @include media-query(gt-xs) {
+               display: inline;
+            }
+         }
+         > .form__input--text {
+            padding: 14px 16px;
+
+            @include media-query(gt-xs) {
+               border: {
+                  top-right-radius: 0;
+                  bottom-right-radius: 0;
+               }
+            }
+            background-color: $light-white;
+            color: $dark-blue;
+            cursor: text;
+         }
+         > .form__input--submit {
+            margin-top: 20px;
+            padding: 14px 24px;
+            @include media-query(gt-xs) {
+               border: {
+                  top-left-radius: 0;
+                  bottom-left-radius: 0;
+               }
+               margin-left: -4px;
+               margin-top: 0;
+            }
+            background-color: $dark-blue;
+            color: $white;
+         }
+      }
+   }
+}

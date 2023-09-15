@@ -1,0 +1,91 @@
+footer {
+   background-color: $dark-blue;
+   padding: {
+      top: 60px;
+      bottom: 60px;
+   }
+   .container {
+      flex-direction: column;
+      align-items: flex-start;
+      @include media-query(gt-xs) {
+         flex-direction: row;
+         justify-content: space-between;
+      }
+      > .footer__left-section {
+         flex-direction: column;
+         width: 100%;
+         @include media-query(gt-xs) {
+            justify-content: flex-start;
+            align-items: flex-start;
+         }
+         > .logo {
+            width: fit-content;
+            gap: 14.5px;
+         }
+         > .main-footer__right-section {
+            margin-top: 17px;
+            > .title {
+               color: $white;
+               text-align: center;
+            }
+            > img {
+               display: block;
+               cursor: pointer;
+               &:nth-child(2) {
+                  margin: {
+                     top: 18px;
+                     bottom: 15px;
+                  }
+               }
+            }
+            @include media-query(gt-xs) {
+               display: none;
+            }
+         }
+         > .links-row {
+            column-gap: 24px;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            > a {
+               box-sizing: border-box;
+               color: $white;
+            }
+            @include media-query(gt-xs) {
+               justify-content: flex-start !important;
+            }
+         }
+         > .links-row-1 {
+            margin-top: 28.5px;
+            margin-bottom: 14px;
+         }
+         .copy-right {
+            color: $white;
+            margin-top: 26px;
+            text-align: center;
+            @include media-query(gt-xs) {
+               text-align: left;
+            }
+         }
+      }
+      > .footer__right-section {
+         @include media-query(lt-sm) {
+            display: none;
+         }
+         > .title {
+            color: $white;
+         }
+         > img {
+            display: block;
+            cursor: pointer;
+            &:nth-child(2) {
+               margin: {
+                  top: 21px;
+                  bottom: 17px;
+               }
+            }
+         }
+      }
+   }
+}
